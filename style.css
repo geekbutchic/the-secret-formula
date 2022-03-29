@@ -11,6 +11,13 @@ html {
 .container2 {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.container3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 100px;
 }
 
@@ -21,4 +28,12 @@ h1 {
 
 #sandwich_submit {
   margin-top: 20px;
+}
+
+#haircut_submit{
+    margin-top: 15px;
+}
+
+#reset{
+    margin-left: 10px;
 }

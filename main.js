@@ -82,3 +82,33 @@ sandwich.addEventListener(`click`, (event) => {
   alert(sandwich_complete);
   unCheck();
 });
+
+//Below your previous form, create another new form. This form will represent a haircut scheduling form which should contain the following inputs:
+// * a date input for what day the haircut should be scheduled for
+// * a text input to allow the user to request a specific hair cutter
+// * one set of two radio inputs that allows the user to select whether they have long or short hair
+// * a submit button
+
+// Additionally, make sure to add proper labels for each input.
+
+// When the user submits the form, display an alert with a message with the following structure: "Haircut scheduled for [DATE] with [HAIRCUTTER] for [LONG/SHORT] hair." 
+
+let date = document.querySelector(`#date`);
+let stylist = document.querySelector(`#stylist`);
+let long = document.querySelector(`#long`);
+let short = document.querySelector(`#short`);
+let haircut = document.querySelector(`#haircut_submit`);
+
+
+haircut.addEventListener(`click`, (event) => {
+    event.preventDefault();
+    let appointment = `Haircut scheduled for: ` + date.value + ` with ` + stylist.value + ` for `;
+    if (long.checked === true) {
+        appointment += `long haircut.`
+    } 
+    if (short.checked) {
+        appointment += ` short haircut.`
+    }
+    console.log(appointment);
+    alert(appointment)
+})
